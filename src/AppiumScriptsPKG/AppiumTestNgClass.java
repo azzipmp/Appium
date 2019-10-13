@@ -18,7 +18,7 @@ import io.appium.java_client.remote.MobilePlatform;
 // App packege and activities get from andriod
 public class AppiumTestNgClass {
 	
-	public DesiredCapabilities cap;
+	public DesiredCapabilities cap1;
 	public RemoteWebDriver driver;
 	public String expected="Please enter password with minimum 7 characters";
 	 @BeforeTest
@@ -28,14 +28,14 @@ public class AppiumTestNgClass {
 		//	File f1=new File("D:\\Selenium - Java\\ApiDemos-debug.apk");
 //			File f1=new File("D:\\Selenium - Java\\AndroidCalculator (1).apk");
 		//	File f1=new File("D:\\Selenium - Java\\Simple Notepad (1).apk");
-			 cap = new DesiredCapabilities();
-			cap.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
+			 cap1 = new DesiredCapabilities();
+			cap1.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
 		//	cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
-			cap.setCapability(MobileCapabilityType.DEVICE_NAME,"Android Emulator");
+			cap1.setCapability(MobileCapabilityType.DEVICE_NAME,"Android Emulator");
 			//cap.setCapability(MobileCapabilityType.DEVICE_NAME, "1550775e"); 
-			cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, "200");
-			cap.setCapability(MobileCapabilityType.APP,f1.getAbsolutePath());
-			 driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), cap);
+			cap1.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, "200");
+			cap1.setCapability(MobileCapabilityType.APP,f1.getAbsolutePath());
+			 driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), cap1);
 			// driver = new RemoteWebDriver(new URL("http://127.0.0.1:4723/wd/hub"),cap);
 		 
   }
